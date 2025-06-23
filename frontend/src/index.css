@@ -1,0 +1,178 @@
+/* Basic Reset and Global Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Important for padding */
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* NEW: Secondary button style for Edit/Cancel */
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Navbar Styles */
+.navbar {
+  background: #333;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center; 
+}
+
+.welcome-text {
+  margin-right: 1rem; 
+  font-style: italic;
+  color: #e0e0e0; 
+}
+
+/* NEW: Filter Controls Styles */
+.filter-controls {
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filter-controls .btn {
+  flex-grow: 1;
+}
+
+.filter-controls .btn.active {
+  background-color: #28a745;
+  color: white;
+}
+
+
+/* Todo List Styles */
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem; /* Added gap for spacing */
+}
+
+.todo-item.completed .todo-title {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.todo-content {
+  display: flex;
+  flex-direction: column; /* Title and due date stack */
+  flex-grow: 1;
+}
+
+.todo-title {
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+/* NEW: Due Date Style */
+.due-date {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* NEW: Edit Input Style */
+.edit-input {
+  flex-grow: 1;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0; /* Prevent buttons from shrinking */
+}
